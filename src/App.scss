@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+
+body {
+  background-color: rgb(187, 197, 161);
+  margin: 0;
+  padding: 0;
+  line-height: 3;
+  font-family: "Rampart One", cursive, sans-serif;
+  color: rgb(131, 108, 4);
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.header {
+  border-bottom: dashed 5px rgb(68, 99, 21);
+  box-shadow: 13px 22px 25px rgba(46, 78, 46, 0.23);
+  height: 60px;
+  width: 100%;
+  nav {
+    height: 100%;
+    max-width: 922px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    div {
+      img {
+        width: 64px;
+        position: absolute;
+        top: 3px;
+      }
+    }
+    h1 {
+      float: right;
+      margin-left: 500px;
+    }
+  }
+}
+.content {
+  display: flex;
+  max-width: 922px;
+  margin: auto;
+  margin-top: 100px;
+}
+.sidebar {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  user-select: none;
+  width: 266px;
+  height: 53vh;
+  padding-top: 2px;
+  border-right: 5px dashed #d4f4d4;
+  background-color: rgba(224, 250, 241, 0.33);
+
+  div {
+    /* h2 {
+      display: inline;
+      margin-left: 29px;
+    }*/
+
+    margin-bottom: 1px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    &.active {
+      background-color: #d4f4d4;
+    }
+    /* .icon {
+    }*/
+  }
+  div:hover {
+    /*h2 {
+      display: inline;
+      margin-left: 29px;
+    }*/
+    font-size: 0.7rem;
+    color: black;
+    background-color: rgb(241, 255, 240);
+    align-content: center;
+    display: grid;
+    justify-content: center;
+  }
+}
+.add-task-btn:hover {
+  cursor: pointer;
+}
+.mainbar {
+  margin-left: 150px;
+  width: 1233px;
+  height: 88vh;
+  background-color: rgb(234, 247, 242);
+  border-left: 2px solid rgb(194, 243, 227);
+  border-right: 2px solid rgb(194, 243, 227);
+}
+.add-task-dialog {
+  margin-top: 10px;
+  input {
+    width: 100%;
+    border: 1px dashed #aaa;
+    background-color: aliceblue;
+    border-radius: 4px;
+    height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.add-task-actions-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  .add-btn {
+    background-color: #aaa;
+    border: 2px solid transparent;
+    color: azure;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 6px 12px 7px 12px;
+    border-radius: 5px !important;
+    &:disabled {
+      background-color: gray;
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+  .cancel-btn {
+    all: unset;
+    color: #856;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0px 5px;
+  }
+}
+#print {
+  float: right;
+  margin-right: 63px;
+}
